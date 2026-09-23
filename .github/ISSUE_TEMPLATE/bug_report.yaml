@@ -1,0 +1,25 @@
+name: Bug Report
+Description: 
+  Report a bug in the application or infrastructure.
+  Please provide as much detail as possible to help us reproduce and fix the issue.
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What Happened
+      description: Please describe the issue you encountered in detail. Include logs or any screenshots if you have.  
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit SHA
+    
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options: [local, development, qa, staging, production]   
+      description: Please specify the environment where the issue occurred (e.g., development, staging, production).
